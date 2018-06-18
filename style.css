@@ -26,6 +26,58 @@
             "footer";
     grid-template-rows: 40px 1fr 50px;
 }
+main {
+    grid-area: main;
+}
+.post-heading{
+    height: 60px;
+    grid-template-columns: 10% 80% 10%;
+}
+.post-caption-text  {
+    font-size:  14px;
+}
+
+.post-likes {
+        margin-bottom: 5px;
+}
+
+.post-location {
+    font-size: 12px;
+}
+
+.post-location .fa-angle-right {
+    font-size: 10px;
+}
+
+
+.user-profile-picture img {
+    height: 40px;
+    border-radius: 50%;
+}
+.post-footer{
+    margin-left: 10px;
+}
+
+.post-actions {
+    grid-template-columns: 10% 10% 10% 70%;
+    margin-top: 10px;
+    text-align: left;
+}
+.post-bookmark-btn {
+    text-align: end ;
+}
+.post-details {
+    text-align: start;
+    margin-top: 15px;
+}
+
+.post-details .post-likes {
+    font-size: 14px;
+    font-weight: bold;
+}
+.post-caption-text  {
+    font-size:  14px;
+}
 
 
 
