@@ -79,6 +79,33 @@ main {
     font-size:  14px;
 }
 
+.app-footer {
+    grid-area: footer;
+}
+.menu-items {
+    height: 50px;
+    background-color:#fafafa ;
+    z-index: 1;
+    grid-template-columns: repeat(5,1fr);
+}
+.menu-items .fa-home,.menu-items .fa-plus-square-o,.menu-items .fa-heart-o,.menu-items .fa-user-o {
+    opacity: 0.5;
+}
+.post-navbar,.post-heading,.post-actions,.post-details,.menu-items {
+    display: grid;
+}
+
+.post-heading,.menu-items,.post-navbar {
+    align-items: center;
+}
+.back-btn .fa-angle-left {
+    font-size: 30px;
+}
+.post-navbar .fa-repeat {
+    font-size: 20px;
+    transform: rotate(-50deg);
+}
+
 
 
 
