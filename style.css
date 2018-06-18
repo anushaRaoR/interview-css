@@ -2,7 +2,30 @@
 
 /* --- YOUR CODE STARTS HERE --- */
 
+.app-header {
+    grid-area: nav;
+}
+.post-navbar {
+    background-color:  #fafafa;
+    height:40px;
+    grid-template-columns: 10% 80% 10%;
+    border-bottom: 1px solid #f2f2f2;
+}
 
+.post-navbar .photo-heading {
+    font-weight: bold;
+}
+
+.app {
+    display: grid;
+    height: 100%;
+    grid-template-columns:1fr;
+    grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+    grid-template-rows: 40px 1fr 50px;
+}
 
 
 
