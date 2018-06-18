@@ -7,6 +7,11 @@ html,body {
 body {
     margin: 0;
 }
+/*<-------------- START WRAPPERS ------------->*/
+/*
+set grid layout for wrapper,
+make three rows and single column for header, main content and footer menu.
+*/
 .app {
     display: grid;
     height: 100%;
@@ -17,15 +22,22 @@ body {
             "footer";
     grid-template-rows: 40px 1fr 50px;
 }
+/*header wrapper*/
 .app-header {
     grid-area: nav;
 }
+/* main content wrapper */
 main {
     grid-area: main;
 }
+/* footer menu items wrapper */
 .app-footer {
     grid-area: footer;
 }
+/*<-------------- END WRAPPERS ------------->*/
+
+/*<-------------- START POST ITEM ------------->*/
+/* set grid layout for inner components*/
 .post-navbar,.post-heading,.post-actions,.post-details,.menu-items {
     display: grid;
 }
@@ -33,6 +45,10 @@ main {
 .post-heading,.menu-items,.post-navbar {
     align-items: center;
 }
+/*
+set header consistent height for chrome.
+template three columns.
+*/
 .post-navbar {
     background-color:  #fafafa;
     height:40px;
@@ -47,13 +63,16 @@ main {
 .post-navbar .photo-heading {
     font-weight: bold;
 }
-
+/*fa refresh icon rotate to match design*/
 .post-navbar .fa-repeat {
     font-size: 20px;
     transform: rotate(-50deg);
 }
 
-
+/*
+make image use up entire container,
+make main content one level deep, for overlap look of footer and header
+*/
 .post-photo img{
     width: 100%;
     z-index: 0;
@@ -91,7 +110,9 @@ main {
 .post-footer{
     margin-left: 10px;
 }
-
+/*
+template columns for each action icon/button
+*/
 .post-actions {
     grid-template-columns: 10% 10% 10% 70%;
     margin-top: 10px;
@@ -115,22 +136,37 @@ main {
         margin-bottom: 5px;
 }
 
+/*
+scrollable main content wrapped in between header and footer
+*/
 main {
     overflow-y: scroll;
 }
 .post-caption-text  {
     font-size:  14px;
 }
+/*<-------------- END POST ITEM ------------->*/
+
+/*<-------------- START FOOTER ------------->*/
 .menu-items {
     height: 50px;
     background-color:#fafafa ;
+    /*
+    get footer menu items one level above main content
+    */
     z-index: 1;
+     /*
+    menu items and icons
+    */
     grid-template-columns: repeat(5,1fr);
 }
+/*
+stylize currently not selected menu items
+*/
 .menu-items .fa-home,.menu-items .fa-plus-square-o,.menu-items .fa-heart-o,.menu-items .fa-user-o {
     opacity: 0.5;
 }
-
+/*<!-------------- END FOOTER ------------->*/
 .tagged-user {
     text-decoration:none;
 }
