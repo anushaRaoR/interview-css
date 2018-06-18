@@ -7,20 +7,6 @@ html,body {
 body {
     margin: 0;
 }
-.app-header {
-    grid-area: nav;
-}
-.post-navbar {
-    background-color:  #fafafa;
-    height:40px;
-    grid-template-columns: 10% 80% 10%;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.post-navbar .photo-heading {
-    font-weight: bold;
-}
-
 .app {
     display: grid;
     height: 100%;
@@ -31,19 +17,61 @@ body {
             "footer";
     grid-template-rows: 40px 1fr 50px;
 }
+.app-header {
+    grid-area: nav;
+}
 main {
     grid-area: main;
+}
+.app-footer {
+    grid-area: footer;
+}
+.post-navbar,.post-heading,.post-actions,.post-details,.menu-items {
+    display: grid;
+}
+
+.post-heading,.menu-items,.post-navbar {
+    align-items: center;
+}
+.post-navbar {
+    background-color:  #fafafa;
+    height:40px;
+    grid-template-columns: 10% 80% 10%;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.back-btn .fa-angle-left {
+    font-size: 30px;
+}
+
+.post-navbar .photo-heading {
+    font-weight: bold;
+}
+
+.post-navbar .fa-repeat {
+    font-size: 20px;
+    transform: rotate(-50deg);
+}
+
+
+.post-photo img{
+    width: 100%;
+    z-index: 0;
+    max-width: 100%;
+    max-height: 100%;
 }
 .post-heading{
     height: 60px;
     grid-template-columns: 10% 80% 10%;
 }
-.post-caption-text  {
-    font-size:  14px;
+
+.user-post-brief {
+    text-align: start;
 }
 
-.post-likes {
-        margin-bottom: 5px;
+.user-name-text {
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .post-location {
@@ -53,15 +81,13 @@ main {
 .post-location .fa-angle-right {
     font-size: 10px;
 }
-.user-name-text {
-    font-weight: bold;
-    font-size: 14px;
-}
+
 
 .user-profile-picture img {
     height: 40px;
     border-radius: 50%;
 }
+
 .post-footer{
     margin-left: 10px;
 }
@@ -74,6 +100,7 @@ main {
 .post-bookmark-btn {
     text-align: end ;
 }
+
 .post-details {
     text-align: start;
     margin-top: 15px;
@@ -83,12 +110,16 @@ main {
     font-size: 14px;
     font-weight: bold;
 }
-.post-caption-text  {
-    font-size:  14px;
+
+.post-likes {
+        margin-bottom: 5px;
 }
 
-.app-footer {
-    grid-area: footer;
+main {
+    overflow-y: scroll;
+}
+.post-caption-text  {
+    font-size:  14px;
 }
 .menu-items {
     height: 50px;
@@ -99,29 +130,7 @@ main {
 .menu-items .fa-home,.menu-items .fa-plus-square-o,.menu-items .fa-heart-o,.menu-items .fa-user-o {
     opacity: 0.5;
 }
-.post-navbar,.post-heading,.post-actions,.post-details,.menu-items {
-    display: grid;
-}
 
-.post-heading,.menu-items,.post-navbar {
-    align-items: center;
-}
-.back-btn .fa-angle-left {
-    font-size: 30px;
-}
-.post-navbar .fa-repeat {
-    font-size: 20px;
-    transform: rotate(-50deg);
-}
-.post-photo img{
-    width: 100%;
-    z-index: 0;
-    max-width: 100%;
-    max-height: 100%;
-}
-.user-post-brief {
-    text-align: start;
-}
 .tagged-user {
     text-decoration:none;
 }
